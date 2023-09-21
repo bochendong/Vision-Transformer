@@ -10,18 +10,25 @@ The Vision Transformer works by first splitting an image into fixed-size patches
 
 ## Process Breakdown
 
-### Split into Patch
+### Splitting Image into Patches
+
+The first step involves dividing the image into non-overlapping patches of fixed size. Each patch is then linearly embedded to generate a flat vector representation.
 
 <img src = './img/00.png'>
 
-### Sent to mult-head attention
+### Multi-head Self-Attention Mechanism
+
+The embedded patches are then processed through the multi-head self-attention mechanism of the Transformer. This step allows the model to capture both local and global image dependencies.
 
 <img src = './img/01.png'>
 
-#### Q
+#### Query (Q) Matrix
 
+The Query matrix is responsible for determining the relationship context for each patch in relation to others.
 <img src = './img/02.png'>
 
-#### K
+#### Key (K) Matrix
+
+The Key matrix matches the Query matrix against all other patches to weigh their importance.
 
 <img src = './img/03.png'>
